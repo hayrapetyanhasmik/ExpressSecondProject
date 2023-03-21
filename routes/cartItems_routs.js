@@ -5,7 +5,7 @@ function create_cartItems_routes(app){
     app.post('/addCartItems',authenticateTokenUser, add_cartItems)
     app.get('/getCartItems', authenticateTokenUser, get_cartItems)
     app.put('/updateCartItems/:id',authenticateTokenUser, update_cartItems)
-    app.delete('/deleteCartItems',authenticateTokenUser, delete_cartItems)
+    app.delete('/deleteCartItems/:id',authenticateTokenUser, delete_cartItems)
     app.get('/join',joinAll)
 }
 
